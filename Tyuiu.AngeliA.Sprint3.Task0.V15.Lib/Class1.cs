@@ -13,7 +13,7 @@ namespace Tyuiu.AngeliA.Sprint3.Task0.V15.Lib
                 double term = (Math.Pow(value, k) + 2.0 / (k + 1)) * sinT;
                 sum += term;
             }
-
+            sum = Math.Round(sum, 3);
             return sum;
         }
     }
