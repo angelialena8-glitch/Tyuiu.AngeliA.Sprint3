@@ -1,17 +1,23 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint3;
 namespace Tyuiu.AngeliA.Sprint3.Task3.V1.Lib
 {
-    public class Class1 : ISprint3Task2V3
+    public class Class1 : ISprint3Task3V1
     {
-        public double GetSumSeries(int value, int startValue, int stopValue)
+        public int GetCharCount(string value, char item)
         {
-            double sumSeries = 0;
-            do
+            if (string.IsNullOrEmpty(value))
+                return 0;
+
+            int count = 0;
+
+            // Использование цикла foreach для подсчёта символов
+            foreach (char c in value)
             {
-                sumSeries = sumSeries + (Math.Pow(value, 2) * startValue) + 1;
-                startValue++;
-            } while (startValue <= stopValue);
-            return Math.Round(sumSeries, 3);
+                if (c == item)
+                    count++;
+            }
+
+            return count;
         }
     }
 }
